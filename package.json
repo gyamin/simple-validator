@@ -1,0 +1,23 @@
+{
+  "name": "simple-validator",
+  "version": "0.1.0",
+  "description": "simple javascript validation library!!",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gyamin/simple-validator.git"
+  },
+  "author": "gyamin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gyamin/simple-validator/issues"
+  },
+  "homepage": "https://github.com/gyamin/simple-validator#readme",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
