@@ -1,6 +1,6 @@
 const validator = require('./../lib/Validator')
 
-// エラーになるパターン
+// NG Test
 test("required, but value is ''", () => {
     let result = validator.validateValue({"required": true}, "")
     expect(result.isError).toBe(true);
@@ -49,7 +49,7 @@ test("min, 'ab' is shorter than 3 character", () => {
     expect(result.error.constructor.name).toBe('ValidateError');
 })
 
-// OKになるパターン
+// OK Test
 test("required", () => {
     let result = validator.validateValue({"required": true}, "abc")
     expect(result.isError).toBe(false);
@@ -60,30 +60,27 @@ test("type string", () => {
     expect(result.isError).toBe(false);
 })
 
-// rule = {"required": true}
-// result = validator.validateValue(rule, "abc")
-// console.log(result)
-//
-// rule = {"type": "string"}
-// result = validator.validateValue(rule, "100")
-// console.log(result)
-//
-// rule = {"type": "number"}
-// result = validator.validateValue(rule, 100)
-// console.log(result)
-//
-// rule = {"type": "date"}
-// result = validator.validateValue(rule, '2022-12-31')
-// console.log(result)
-//
-// rule = {"regexp": "^123*"}
-// result = validator.validateValue(rule, '12345')
-// console.log(result)
-//
-// rule = {"max": 6}
-// result = validator.validateValue(rule, 'abcdef')
-// console.log(result)
-//
-// rule = {"min": 3}
-// result = validator.validateValue(rule, 'abc')
-// console.log(result)
+test("type number", () => {
+    let result = validator.validateValue({"type": "number"}, 100)
+    expect(result.isError).toBe(false);
+})
+
+test("type date", () => {
+    let result = validator.validateValue({"type": "date"}, '2022-12-31')
+    expect(result.isError).toBe(false);
+})
+
+test("regexp", () => {
+    let result = validator.validateValue({"regexp": "^123*"}, '12345')
+    expect(result.isError).toBe(false);
+})
+
+test("max", () => {
+    let result = validator.validateValue({"max": 6}, 'abcdef')
+    expect(result.isError).toBe(false);
+})
+
+test("min", () => {
+    let result = validator.validateValue({"min": 3}, 'abc')
+    expect(result.isError).toBe(false);
+})
