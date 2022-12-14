@@ -1,2 +1,2 @@
-# simple-validator
+# sinpuru-validator
 JavaScript simple validation library.

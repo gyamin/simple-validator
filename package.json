@@ -9,14 +9,14 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gyamin/simple-validator.git"
+    "url": "git+https://github.com/gyamin/sinpuru-validator.git"
   },
   "author": "gyamin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gyamin/simple-validator/issues"
+    "url": "https://github.com/gyamin/sinpuru-validator/issues"
   },
-  "homepage": "https://github.com/gyamin/simple-validator#readme",
+  "homepage": "https://github.com/gyamin/sinpuru-validator#readme",
   "devDependencies": {
     "jest": "^29.3.1"
   }
