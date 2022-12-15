@@ -1,4 +1,4 @@
-const validator = require('./../lib/Validator')
+import validator from "../lib/Validator.js";
 
 // NG Test
 test("required, but value is ''", () => {

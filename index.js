@@ -1,3 +1,3 @@
 import Validator from './lib/Validator'
 
-module.exports = Validator
+export default Validator
