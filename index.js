@@ -1,3 +1,3 @@
-import Validator from './lib/Validator'
+import Validator from './lib/Validator.js'
 
 export default Validator
